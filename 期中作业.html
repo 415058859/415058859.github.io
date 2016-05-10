@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+   <title>中国的“机器人革命”</title>
+    <meta charset='utf-8'>
+   
+    
+    <style>
+   
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+    body {
+    background-color:#FFECEC;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/*网页居中容器样式设定*/
+
+#wrap {
+    margin: 0 auto;
+    height: 90px;
+    width: 970px;
+}
+
+
+/*顶部通栏广告样式设定*/
+
+.top-ad {
++    margin-bottom: 10px;
++}
+
+    margin-top: 3px;
+
+/*顶部导航条样式设定*/
+
+#nav {
+    border-bottom: 10px #DCB5FF solid;
+    padding-bottom: 10px #0072E3
+}
+
+#nav p {
+    color: #272727;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+#nav img {
+    display: block;
+    width: 172px;
+    height: 36px;
+    float: left;
+}
+
+#nav div:last-child {
+    /*background-color: black;*/
+    float: right;
+}
+
+#nav div:last-child p {
+    text-align: right;
+}
+
+#nav h1 {
+    font-family: simhei;
+    font-size: 28px;
+    margin-top: 5px;
+    margin-left: 20px;
+    float: left;
+    font-weight: bold;
+   width: 150px;
+   clear:both;
+        anmation: run  ease-in-out 9s infinite;
+   -moz-animation: run  ease-in-out 9s infinite ;    
+-webkit-animation: run  ease-in-out 9s infinite;    
+-ms-animation: run  ease-in-out 9s infinite;    
+
+     -o-animation: run  ease-in-out 9s infinite;}
+     
+
+
+#nav p a {
+    color: black;
+    text-decoration: none;
+}
+
+#nav form p {
+    float: left;
+}
+
+.menu ul {
+    background-color:white;
+margin:0;
+padding:0;}
+
+
+.menu li {
+    display: block;
+    float: left;
+    width: 95px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    border-right:1px solid #666666;
+    float: left;list-style: none;
+border-top:1px solid #666666;
+border-left:1px solid #666666;
+border-bottom:1px solid #666666;
+    width: 95px;
+background: #6FB7B7;
+}
+
+
+.menu a {
+    color: white;
+    /*display: block;*/
+    text-decoration: none;
+    padding: 1px;
+}
+
+.menu a:hover {
+    color: white;
+    background-color: #FF8EFF;
+    border: 1px #FFECEC solid;
+    border-radius: 5px;
+}
+
+
+/*主体部分样式*/
+.left {
+    width: 620px;
+    float: left;
+    border-right: 1px #F6E9D8 solid;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+.aside {
+    width: 339px;
+    float: left;
+}
+
+.published-time {
+   color: black;
+    margin: 18px 0;
+    font-weight: bold;
+}
+
+.left h1 {
+    font-size: 25px;
+    font-family: "Microsoft Yahei", "monospace";
+    font-weight: bold;
+   margin-bottom: 15px;
+}
+
+.author {
+    color: black;
+   font-size: 17px;
+   font-weight: bold;
+}
+
+.bdsharebuttonbox {
+    float: right;
+}
+
+.content p {
+    text-indent: 2em;
+    font-size: 17px;
+    line-height: 1.5;
+   margin: 8px 0;
+}
+
+.content .first-p {
+    text-indent: 0;
+}
+
+.first-p:first-letter {
+    color: block;
+    font-size: 48px;
+    display: block;
+    float: left;
+    margin: 0 8px 8px 0;
+}
+
+.content p.img {
+    text-align: center;
+    text-indent: 0;
+}
+.aside-ad {
+    width: 320px;
+   height: 270px;
+    background-color: #FFECEC;
+    padding-top: 10px;
+   position: relative;
+   resize: vertical;
+    overflow: auto;
+    text-align: center;
+}
+
+.aside-ad img {
+    display: block;
+    position: absolute;
+    
+    resize: vertical;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+.aside-ad img {transform: rotate(0 0);}
+
+.aside-ad img:hover{transform: rotate(720deg); }
+.letter{clear: both;
+margin: 0 1px 1px;
+border-top: 8px solid orange;
+overflow: hidden;}
+    
+ ol{list-style-type: li;
+     list-style-position: inside;
+     line-height: 32px;
+     text-align: center;}
+     .more-topics {
+    float: right;
+    font-size: 14px;}
+  #footer ul li a {
+    color: #2894FF;
+    margin: 0 0 0 .20em;
+    font-size: 14px;
+    line-height: 1;
+    padding:0 0 0 10em;
+}  #footer span {
+    color: black;
+    font-size: 14px;
+    line-height: 1;
+}
+
+
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="top-ad"><img src="FT2.jpg" alt="广告"></div>
+       <div id="nav" class="clearfix">
+            <div>
+                <p>2016年5月10日 发布</p>
+               <img src="FT.jpg" alt="ft中文网标记"><br/>
+               <br/>>
+                <h1>科技</h1>
+            </div>
+            <div>
+                <p>
+                    <span><a href="#">新手指南</a></span>                    <span>登录</span>
+                    <span>注册</span>
+                </p>
+                <form action="#">
+                    <p>
+                        <input type="text" name="" id="">
+                    </p>
+                    <p>
+                        <input type="radio" name="文章" id="">文章</p>
+                    <p>
+                        <input type="radio" name="日期" id="" checked>日期</p>
+                    <p>
+                        <input type="submit" value="搜索">
+                    </p>
+                </form>
+           </div>
+        </div>
+        <div class="menu">
+            <ul class="clearfix" id="nn">
+                <li style="left:auto">
+                <a href="#">首页</a>
+                     </li>
+                <li><a href="#">中国</a></li>
+                <li><a href="#">全球</a></li>
+                <li><a href="#">经济</a></li>
+                <li><a href="#">金融市场</a></li>
+                <li><a href="#">商业</a></li>
+                <li><a href="#">观点</a></li>
+                <li><a href="#">管理</a></li>
+                <li><a href="#">生活时尚</a></li>
+                <li><a href="#">视频</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <div class="left">
+                <div class="published-time">2016年5月10日 06.07AM</div>
+                <h1>中国的“机器人革命”</h1>
+                <p class="author">英国《金融时报》 白杰明 香港报道</p>
+                <div class="clearfix">
+                    <div class="bdsharebuttonbox">
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>
+                        <a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
+                       <a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a>
+                        <a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a>
+                        <a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a>
+                    </div>
+                    <script>
+                    window._bd_share_config = {
+                        "common": {
+                           "bdSnsKey": {},
+                           "bdText": "",
+                            "bdMini": "2",
+                            "bdMiniList": false,
+                            "bdPic": "",
+                            "bdStyle": "0",
+                            "bdSize": "16"
+                        },
+                        "share": {},
+                        "image": {
+                            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+                            "viewText": "分享到：",
+                            "viewSize": "16"
+                        },
+                        "selectShare": {
+                            "bdContainerClass": null,
+                            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+                        }
+                   };
+                    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+                    </script>
+                </div>
+                <div class="content">
+                    <p class="img"><img src="123.jpg" alt=""></p>
+                    <p class="first-p">
+                    <i>位</i>
+
+                   <p>于中国广东省的樱奥厨具(Ying Ao)看起来并不像一家未来的工厂。厂门上方的招牌已经褪色；车间里，油腻的地板上有一滩一滩的淤泥，浓重的金属粉尘（不锈钢抛光工艺的副产品）让人喘不过气。工人们拉着手推车走过时，空洞的、车棚一般的厂房里回响着巨大的哐当声。</p>
+                    <p>广东省是中国制造业增长的发动机，去年创造了6150亿美元的出口额，超过了中国出口总额的四分之一。在广东省的这一地区，工人的薪资标准约为每月4000元人民币（合600美元）。据樱奥副总经理陈从汉介绍，由于厂内的劳动条件不是太好，这家为欧美厨房生产水槽的企业不得不支付双倍于上述标准的工资。因此，四年前该公司开始购买机器，代替越来越昂贵的人力。</p>
+                    <p>如今，9台机器人在做着140名全职工人的工作。机械臂会从半成品堆中抓起水槽，把它们打磨得闪闪发亮，再把它们放在自动行驶的小车上，由其把这些水槽带到一个与电脑相连的摄像头前，进行最终的质量检验。</p>
+                    <p>这家每天出口1500个水槽的企业在机器人上的投资超过300万美元。陈从汉表示：“这些机器比人力更便宜、更精确、更可靠。机器人从未毁掉一批产品。”他带着一丝苦笑补充说：“我希望未来能换掉更多人力。”</p>
+                    <p>在整个中国南方沿海制造业地带，成千上万个与陈从汉所在工厂类似的厂家正在向自动化转型。这是一场政府支持的、由机器人带动的工业革命，其规模之浩大是世界从未见过的。自2013年以来，中国每年采购的工业机器人超过了其他任何国家，包括德国、日本和韩国等高科技制造业巨人。根据产业游说组织——国际机器人联合会(International Federation of Robotics，IFR)的说法，到今年底，中国将超过日本，成为全球运用工业机器人最多的国家。IFR总干事古德龙•利岑贝格尔(Gudrun Litzenberger)表示，中国颠覆性变化的速度是“机器人历史上独一无二的”。该组织的总部位于德国，这里是世界上一些顶尖工业机器人制造商的所在地。</p>
+                    <p>政府推动的“机器人革命”
+
+中国在工业机器人上的大举投入，源自一个迫切的经济问题。从上世纪80年代以来，随着北京的共产党统治者向全球贸易打开大门，庞大而廉价的劳动力帮助中国成为全球最大的制成品出口国。迅猛的经济增长令数亿中国人摆脱了贫困，并随着劳动者从农村迁居城镇，转变了中国大片地区的面貌。然而，日益壮大的中产阶层和人口老龄化导致中国的薪资水平不断攀升，削弱了中国的竞争优势。中国的劳动力人口预计会从去年的10亿降至2030年的9.6亿，到2050年进一步滑落至8亿。这在一定程度上是已经在2015年正式废止的一胎化的结果。
+                   </p>
+                   
+               </div>
+                <!-- 多说评论框 start -->
+                <div class="ds-thread" data-thread-key="3860bd9141025e6e9bb745f95eedd4d4" data-title="请替换成文章的标题" data-url="请替换成文章的网址">
+                </div>
+                <!-- 多说评论框 end -->
+                <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                <script type="text/javascript">
+               var duoshuoQuery = {
+                    short_name: "adamyang2006"
+                };
+                (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';
+                    ds.async = true;
+                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+
+               </script>
+                <!-- 多说公共JS代码 end -->
+               <div id="jpg">
+                <img src=""  alt="广告图片" />
+
+          </div>
+           </div>
+            <div class="aside">
+                <div class="aside-ad"><img src="图片2.jpg" hspace="0" vspace="0" height="265" width="300"></div>
+               <div id="line" class=letter></div>
+
+
+                <h3>
+                <a target="_blank">你可能喜欢</a>
+                </h3>
+                <div class="data" style="display:block">
+                <p style="color:red;"><marquee>暂时没有为您推荐的文章，请坚持阅读的好习惯！</marquee></p>
+                </div>
+                <div id="line" class=letter>
+                
+                </div>
+
+            </div>
+
+            <div id="article">
+                <h3 id="hot">十大热门文章</h3>
+                 <ol  style=color:red;class="wen">
+                     <<li><a target="_blank" href="#">判别“文革”是否再来的三个指标</a></li>
+                     <li><a target="_blank" href="#">特朗普葬送“美国治下的和平</a></li>
+                     <li><a target="_blank" href="#">中国经济刺激举措效力减弱</a></li>
+                     <li><a target="_blank" href="#">满清高官为何主张“土烟驱逐洋烟”？</a></li>
+                     <li><a target="_blank" href="#">中国的“机器人革命”</a></li>
+                     <li><a target="_blank" href="#">伦敦新名片：草根穆斯林市长</a></li>
+                     <li><a target="_blank" href="#">香港楼市盛极而衰</a></li>
+                     <li><a target="_blank" href="#">中国经济改革正步入险境？</a></li>
+                     <li><a target="_blank" href="#">定调L型走势，中国经济驶向何方？</a></li>
+                     <li><a target="_blank" href="#">中国为获得市场经济地位加紧游说 </a><br/></li>
+                     <a class=more-topics href="#">更多排行榜</a>
+                        <br></br>
+
+
+                 </ol>
+                 
+                 </div>
+
+
+                  
+            </div>
+             <div id="underline">
+                     
+<hr  size="12" color="red" align="left"></hr>
+<div id="site" class="one">
+
+
+ <div id="only">
+            <img src="图片3.jpg" alt="" hspace="10" height="200" width="250">
+        </div>
+<hr  size="12" color="red" align="left"></hr>
+<h3><a href="#"></a>评论最多的文章</h3>
+<ol>
+<li>
+<a target="_blank" href="#">对九线段裁决后续影响的预测</a>
+</li>
+<li>
+<a target="_blank" href="#">魏则西事件只是医疗乱象的冰山一角</a>
+</li><li>
+<a target="_blank" href="#">世界“霍布斯化”风险与中国抉择</a>
+</li><li>
+<a target="_blank" href="#">中国在南中国海的“两手抓”战略</a>
+</li><li>
+<a target="_blank" href="#">从特朗普回看“五四”:中美历史的变奏</a>
+</li><li>
+<a target="_blank" href="#">百度搜索可以视同广告吗</a>
+</li><li>
+<a target="_blank" href="#">土地使用权到期引发中国居民产权焦虑</a>
+</li><li>
+<a target="_blank" href="#">魏则西之死使百度网络广告成千夫所指</a>
+</li><li>
+<a target="_blank" href="#">男友加薪了，房租怎么摊？</a>
+</li><li>
+<a target="_blank" href="#">特朗普将葬送“美国治下的和平”</a>
+</li><li>
+
+<a class=more-topics href="#">更多排行榜</a>
+                        <br></br>
+</ol>
+</div>
+        </div> <div id="line" class=letter></div>
+        
+
+       
+        <div id="footer">
+            <div id="footer-content">
+            <ul>
+   
+            <li>
+     zz       <a href="#">关于我们</a>
+            <a href="#">加入我们</a>
+            <a href="#">联系方式</a>
+            <a href="#">问题反馈</a>
+            <a href="#">合作伙伴</a>
+            <a href="#">服务条款</a>
+            <a href="#">版权声明</a>
+            <a href="#">最新动态</a>
+            <a href="#">广告业务</a>
+            
+            </li>
+            </ul>
+            <span><strong>© The Financial Times Ltd 2016 FT and 'Financial Times' are trademarks of The Financial Times Ltd.</strong> </span>
+        </div>
+        
+    </div>
+</body>
+
+</html>
