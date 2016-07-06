@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+<script src="jquery.min_1.10.2.js"></script>
+   <style>
+   .time{
+    float: right;
+    color:purple;
+   }
+    *{margin: 0;padding: 0;}
+        .ad{width: 100%;}
+        .ad_main{width:400px;height: 250px;margin: 0 auto;position: relative;}
+        .ad_mian ul li{width: 100%;height: 250px;float: left;}
+        .ad .active{background: #ccc;}
+        .btn{width: 100%;height: 50px;position: absolute;left:50%;top:50%;margin: -25px 0 0 -200px;color: #ccc;line-height: 50px;font-size: 30px;font-weight: bold;z-index: 50;display: none;}
+        .left{float: left;cursor: pointer;background: #999;opacity: 0.7;}
+        .right{float: right;cursor: pointer;background: #999;opacity: 0.7;}
+        .ad:hover .btn{display: block;}
+
+
+   </style>
+   
+<script>
+    $(function(){
+        var img_size = $(".ad>div a").length;
+        //获取当前索引
+        for(var i =0;i<img_size;i++){
+            var name = i + 1;
+            //插入图片
+            $(".ad>div a").eq(i).append("<img src='img/"+name+".jpg' style='width:100%;height:100%;position: absolute;left:0;top:0;border:0;display:none;'>");
+            $(".ad>div a").eq(0).find("img").show();
+            //插入下标
+            $(".ad>div").children("div").eq(0).append("<span style='display:inline-block;width: 15px;height: 15px;border:1px solid #ccc;border-radius: 360%;'></span>");
+            //添加样式
+            var w = $(".ad>div").children("div").eq(0).find("span").width()*(img_size+1);
+            var h =  $(".ad>div").children("div").eq(0).find("span").height();
+            $(".ad>div").children("div").eq(0).css({width:w,heigth:h,position:"absolute",left:"50%",bottom:0,marginLeft:-1 * w/2,cursor: "pointer",textAlign:"center"});
+            $(".ad>div").children("div").eq(0).find("span").eq(0).addClass("active");
+        }
+         var x = 0;
+        //淡入淡出特效
+        function showImg(x){
+            $(".ad>div a").eq(x).find("img").stop(true,true).fadeIn().parent("a").siblings().find("img").stop(true,true).fadeOut();
+            $(".ad>div").children("div").eq(0).find("span").eq(x).addClass("active").siblings().removeClass("active");
+        }
+        //定时
+        var now = setInterval(move,2000);
+        function move(){//相当于向右移动
+            x++;
+            showImg(x);
+            if(x==img_size){x=-1;}
+        }
+        //设置鼠标移入停止
+        $(".ad").hover(function(){
+            clearInterval(now);
+        },function(){
+            now = setInterval(move,2000);
+        });
+        //设置鼠标移入下表事件
+        $(".ad>div").children("div").eq(0).find("span").mouseenter(function(){
+            var index = $(this).index();
+            x=index;//清除鼠标下表 定时器不往下一个继续运行的bug
+            showImg(index);
+        });
+        //点击左右事件
+        $(".right").click(function(){
+            move();
+        });
+        $(".left").click(function(){
+            x--;
+            showImg(x);
+            if(x==0){x=img_size;}
+        });
+    });
+</script> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>2016网络中国节·端午</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nivo-slider.css">
+    <link rel="stylesheet" href="css/themes/default/default.css">
+    <!-- <link rel="stylesheet" href="css/themes/bar/bar.css"> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row head-nav">
+            <div class="head-nav-wrap">
+                <div class="home">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;新华时政
+                </div>
+                <div class="site-nav"><span>新华网首页</span>|<span>新华地方</span>|<span>新华法治</span>|<span>新华悦读</span></div>
+
+            </div>
+        </div>
+        
+        <div class="row topic-abs">
+        <div class=middle>
+            <div class="topic-wrap">
+                <div class="topic-title">
+                 <div class="time">
+              
+                </div>
+                    <h1>2016网络中国节·端午</h1>
+
+                    <p>
+                       农历五月初五
+                    </p>
+
+                </div>
+               
+                <div class="abs">
+                    <p>专题摘要: 端午节是中国的传统节日，节期在农历五月初五，迄今已有2500余年历史。由驱毒辟邪的节令习俗衍生出各地丰富多彩的祭祀、游艺、保健等民间活动，主要有祭祀屈原、纪念伍子胥、插艾蒿、挂菖蒲、喝雄黄酒、吃粽子、龙舟竞渡、除五毒等，蕴涵独特民族精神和丰富文化内涵。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>高清大图</h2>
+                <div class="slider-wrapper theme-default">
+                    <div id="slider" class="nivoSlider">
+                        <img src="1.jpg" alt="济南：端午小长假传统街巷人气旺" title="">
+                        <img src="2.jpg" alt="圣水祈福庆端午" title="">
+                        <img src="3.jpg" alt="各地群众迎端午" title="">
+                        <img src="4.jpg" alt="西安端午节千人立福蛋" title="">
+                        <img src="5.jpg" alt="湖北宜昌志愿者着汉服祭拜屈原" title="">
+                    </div>
+                </div>
+                <h2>要闻聚焦</h2>
+                <div class="news-list">
+                    <h3>解码习近平的传统文化情结</h3>
+                    <p class="summary">习近平一直高度重视文物工作，他强调，文物承载灿烂文明，传承历史文化，维系民族精神，是老祖宗留给我们的宝贵遗产，是加强社会主义精神文明建设的深厚滋养。习近平对文物工作的重视是其看重传统文化的一个侧面。</p>
+                    <p class="news-meta">2016-06-10</p>
+                </div>
+                <div class="news-list">
+                    <h3>在这些场合，习近平都提到了屈原</h3>
+                    <p class="summary">习近平曾多次提到屈原，要求学习中国历史，就要继承中华民族的优良传统，从中汲取思想精华，结合新的实践不断发扬光大。还多次引用屈原的名句来阐述思想，寄意深远。新华网《学习进行时》原创品牌栏目“讲习所”为您一一梳理。</p>
+                    <p class="news-meta">2016-06-09</p>
+                </div>
+                <div class="news-list">
+                    <h3>端午假期首日铁路发送旅客超千万人次</h3>
+                    <p class="summary">记者１０日从中国铁路总公司获悉，９日端午假期首日，全国铁路发送旅客１１２７．８万人次，比去年高峰日增加１４７．６万人次，同比增长１５．１％。</p>
+                    <p class="news-meta">2016-06-10</p>
+                </div>
+                <div class="news-list">
+                    <h3>端午节：罗马尼亚人兴致勃勃学习包粽子</h3>
+                    <p class="summary">９日下午，罗马尼亚巴克乌市费迪南德一世中学阶梯教室内欢声笑语，学生和家长们近百人齐聚一堂，学习包粽子、缝香包，感受中国端午节的文化魅力。</p>
+                    <p class="news-meta">2016-06-10</p>
+                </div>
+                <div class="news-list">
+                    <h3>宜昌端午文化现象透析：传承中华民族的共同记忆</h3>
+                    <p class="summary">龙舟飞渡，诗歌行吟，挂艾悬蒲……6月8日，由文化部和湖北省政府主办的2016屈原故里端午文化节开幕。目前在宜昌，像三闾骚坛一样的民间诗社有39家，有诗歌研究和创作学术团体15个，有近2万群众一直坚持着诗歌创作。</p>
+                    <p class="news-meta">光明日报  2016-06-09</p>
+                </div>
+                <h2>最新播报</h2>
+                <div class="news-list">
+                    <h3>海内外数百万游客贵州体验别样端午</h3>
+                    <p class="summary">山东游客刘斌告诉记者：“淋水在这里寓意着风调雨顺、五谷丰登，让体验了不同的民族风情。”全长77.8米，宽2.5米，施秉县号称“世界最长木龙舟”的下水更是引来阵阵惊呼，打破常规的女子选手划龙舟的场景，则形成了一道独特而靓丽的人文风景线。</p>
+                    <p class="news-meta">中国新闻网  2016-06-10</p>
+                </div>
+                <div class="news-list">
+                    <h3>黄山：端午小长假第二天迎客两万余人</h3>
+                    <p class="summary">记者10日从黄山风景区管委会获悉，黄山风景区迎来初夏旅游小高峰，截至当日下午4时，共接待游客20404人，景区旅游秩序良好。</p>
+                    <p class="news-meta">中国新闻网  2016-06-09</p>
+                </div>
+                <div class="news-list">
+                    <h3>端午节当日贵州迎来318W游客</h3>
+                    <p class="summary">端午节当天，贵州各地推出富有特色的节庆活动，共吸引３１８.６９万人次游客前来，旅游总收入１６.７８亿元，再次刷新小长假同期数据纪录。</p>
+                    <p class="news-meta">新华社  2016-06-10</p>
+                </div>
+                <div class="news-list">
+                    <h3>端午节来了 重庆一热心居民为武警送粽子共度佳节</h3>
+                    <p class="summary">武警正在官兵包粽子。早上9时左右，武警重庆总队六支队五中队的战士邓迁从岗哨换下，回到中队营地。“拿两片粽叶，从中间部位折叠成一个漏斗状，左手拿着粽叶，右手添加糯米……”粽叶轻轻一卷，加糯米后捆绑，一个粽子几下就成形了。</p>
+                    <p class="news-meta">华龙网  2016-06-10</p>
+                </div>
+                <div class="news-list">
+                    <h3>端午节的文化内涵</h3>
+                    <p class="summary">中国社会科学院民族文学研究所助理研究员、中国民俗学会理事宋颖承担的一个研究课题是端午节的变迁和民俗。据宋颖介绍，关于端午节的起源有多种传说，但是在漫长的选择淘汰中，纪念屈原的传说流传最广，最得人心。</p>
+                    <p class="news-meta">光明网-《光明日报》  2016-06-10</p>
+                </div>
+                <DIV onclick="lazyLoadDataItem.init()" id="moreBtn"><SPAN>显示更多</SPAN></DIV>
+</style>
+            </div>
+            <div class="col-sm-4">
+                <h2>视频</h2>
+                <div class="image">
+                    <a href="#"><img class="" src="视频.jpg" alt=""></a>
+                    <p class="pic-title"><a href=""></a></p>
+                </div>
+                <h2>相关专题</h2>
+              <div class="tu">
+              	<img src="6.png">
+              </div>
+              <div class="tu">
+              	<img src="7.png">
+              </div>
+              <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nivo.slider.pack.js"></script>
+    <script>
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+            controlNav: false
+        });
+    });
+    </script>
+       
+ 
+ 
+              
+
+
+
+</body>
+
+</html>
